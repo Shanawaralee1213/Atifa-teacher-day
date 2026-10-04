@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efdf">
+  <meta name="description" content="A little Teacher's Day letter for Ma'am Atifa Ambreen, from Abdul Wahab and Abu Bakar.">
+  <title>For Ma'am Atifa Ambreen</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23d99b28'%3E%3Cellipse cx='32' cy='19' rx='10' ry='17'/%3E%3Cellipse cx='32' cy='45' rx='10' ry='17'/%3E%3Cellipse cx='19' cy='32' rx='17' ry='10'/%3E%3Cellipse cx='45' cy='32' rx='17' ry='10'/%3E%3Cellipse cx='32' cy='32' rx='11' ry='29' transform='rotate(45 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='11' ry='29' transform='rotate(-45 32 32)'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='10' fill='%23a75337'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/handwriting.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true"><defs><filter id="paper-grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs></svg>
+  <section id="opening" class="opening" aria-label="A sealed letter">
+    <div class="opening-meta"><span class="date-label" data-copy="date">5 October</span><span class="little-note" data-copy="openingNote">Some things are better written down.</span></div>
+    <div class="envelope-stage">
+      <div class="envelope-note" data-copy="envelopeNote">a little something for you</div>
+      <svg class="envelope-arrow doodle" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 8C70 6 89 44 69 83M69 83l-3-20m3 20 17-12"/></svg>
+      <button id="open-letter" class="envelope" aria-label="Open the letter for Ma'am Atifa Ambreen" aria-controls="letter" aria-expanded="false">
+        <span class="envelope-back"></span>
+        <span class="letter-preview"><span>Dear Ma'am,</span><span class="preview-lines"></span></span>
+        <span class="envelope-pocket"></span><span class="envelope-flap"></span>
+        <span class="envelope-address"><small data-copy="envelopeFor">For</small><span data-copy="teacher">Ma'am Atifa Ambreen</span></span>
+        <span class="wax-seal" aria-hidden="true"><svg viewBox="0 0 60 60"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M30 30C13 20 21 7 30 21C40 4 48 19 36 27C54 22 58 39 39 36C50 50 33 58 30 40C24 57 9 47 22 36C3 38 8 20 24 26Z"/><circle cx="30" cy="31" r="7"/></g></svg><span class="seal-crack"></span></span>
+      </button>
+      <p class="open-hint" data-copy="openHint">Tap the seal. This one's for you.</p>
+    </div>
+    <p class="opening-from"><span data-copy="fromLabel">With love & respect,</span><strong data-copy="students">Abdul Wahab & Abu Bakar</strong></p>
+  </section>
+  <main id="letter" class="letter" hidden>
+    <div class="letter-topline"><span data-copy="date"></span><span data-copy="topline"></span></div>
+    <header class="letter-heading">
+      <p class="salutation" data-copy="salutation"></p>
+      <h1 id="letter-title" tabindex="-1"><span class="sr-only" data-copy="heading"></span><span id="heading-writing" aria-hidden="true"></span></h1>
+      <div class="heading-bottom"><p class="handwritten" data-copy="date"></p><span class="occasion" data-copy="occasion"></span></div>
+      <svg class="heading-star doodle" viewBox="0 0 70 80" aria-hidden="true"><path d="M31 7l5 24 22-5-17 16 15 19-24-8-13 19 2-26-18-11 23-1Z"/><path d="m53 5 6-3m5 16 4-1M5 66l-3 6"/></svg>
+    </header>
+    <section class="teacher-section" aria-label="Our teacher">
+      <figure class="polaroid teacher-polaroid reveal">
+        <span class="tape tape-top" aria-hidden="true"></span>
+        <button id="teacher-photo" class="photo-button" aria-pressed="false">
+          <img id="teacher-image" src="assets/teacher.jpg" alt="Ma'am Atifa Ambreen standing on stage in front of an auditorium of students." width="674" height="1200" loading="lazy" decoding="async">
+        </button>
+        <figcaption data-copy="teacherCaption"></figcaption>
+      </figure>
+      <div class="teacher-aside reveal"><span class="margin-number" aria-hidden="true">01 /</span><p class="handwritten" data-copy="teacherAside"></p><svg class="aside-arrow doodle" viewBox="0 0 160 90" aria-hidden="true"><path d="M150 8C114 72 38 78 10 45m0 0 22 4M10 45l13 19"/></svg></div>
+    </section>
+    <section class="lessons-section" aria-labelledby="lessons-heading">
+      <div class="section-label"><span aria-hidden="true">a few things we carry with us</span></div>
+      <h2 id="lessons-heading" class="reveal" data-copy="lessonsHeading"></h2>
+      <ol id="lessons" class="lessons"></ol>
+      <p class="lesson-postscript handwritten reveal" data-copy="lessonPostscript"></p>
+    </section>
+    <section class="together-section" aria-label="Our memories together">
+      <figure class="polaroid together-polaroid reveal">
+        <span class="tape tape-corner-left" aria-hidden="true"></span><span class="tape tape-corner-right" aria-hidden="true"></span>
+        <div class="parallax-photo"><img id="together-image" src="assets/together.jpg" alt="Ma'am Atifa Ambreen with Abdul Wahab and Abu Bakar at an outdoor college event." width="1050" height="1400" loading="lazy" decoding="async"></div>
+        <figcaption data-copy="togetherCaption"></figcaption>
+      </figure>
+      <span class="photo-margin handwritten reveal" data-copy="photoMargin"></span>
+      <div id="extra-photos" class="extra-photos" aria-label="More photos from our college days"></div>
+      <details class="video-memories reveal">
+        <summary><span class="handwritten" data-copy="videosHeading"></span><span class="details-toggle" aria-hidden="true">+</span></summary>
+        <p class="video-help" data-copy="videosHelp"></p>
+        <div id="videos" class="video-list"></div>
+      </details>
+    </section>
+    <section class="jar-section" aria-labelledby="jar-heading">
+      <div class="jar-intro reveal"><span class="margin-number" aria-hidden="true">02 /</span><h2 id="jar-heading" data-copy="jarHeading"></h2><p data-copy="jarIntro"></p></div>
+      <div class="jar-scene reveal">
+        <div class="jar-object">
+          <button id="note-jar" class="jar-button" aria-controls="paper-note">
+            <svg class="jar-svg" viewBox="0 0 240 300" aria-hidden="true">
+              <path class="jar-fill" d="M67 52h107v30c0 20 33 26 33 59v123c0 19-10 25-28 25H61c-18 0-28-6-28-25V141c0-33 34-39 34-59Z"/>
+              <g class="jar-papers"><path d="m57 194 65-18 17 49-65 18Z" fill="#efd7a0"/><path d="m117 199 65-18 14 52-65 17Z" fill="#f5e8c5"/><path d="m51 247 63-28 18 41-64 20Z" fill="#f5ebd5"/><path d="m107 239 73 2-2 40-73-2Z" fill="#e0b496"/><path d="m80 150 54 8-6 49-55-8Z" fill="#eadcc2"/><path d="m70 206 37-10m37 19 28-8m-83 34 13-6m22 19 30 1m-57-87 21 3" fill="none" stroke="#63766d" stroke-width="1.5" opacity=".55"/></g>
+              <g class="jar-outline" fill="none" stroke="#526c65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M67 52h107v30c0 20 33 26 33 59v123c0 19-10 25-28 25H61c-18 0-28-6-28-25V141c0-33 34-39 34-59Z"/><path d="M76 53v29c0 24-33 32-33 58v122m155-121v120M69 75h103M55 114c29 8 102 8 131-1"/><path fill="#d8c8ab" stroke="#887659" d="M62 33q57-9 115 0v22q-56 7-115 0Z"/><path stroke="#aa9674" d="M70 39h100m-100 8h100"/></g>
+              <path d="M60 132q61-5 121 0v47q-64 5-121 0Z" fill="#fbf6e8" stroke="#b6b69f" stroke-width="1"/>
+              <text id="jar-label" x="121" y="162" text-anchor="middle" fill="#233c4c" font-family="Caveat, cursive" font-size="25"></text>
+            </svg>
+            <span class="jar-hint handwritten" data-copy="jarHint"></span>
+          </button>
+        </div>
+        <div class="note-area"><div id="paper-note" class="paper-note"><span class="note-pin" aria-hidden="true"></span><p id="note-text" dir="auto" role="status" aria-live="polite" aria-atomic="true"></p><span id="note-count" class="note-count"></span></div></div>
+      </div>
+    </section>
+    <section class="message-section" aria-labelledby="message-heading">
+      <svg class="message-doodle doodle reveal" viewBox="0 0 100 40" aria-hidden="true"><path d="M2 21c15-26 33 21 48-3S80 33 98 13"/></svg>
+      <h2 id="message-heading" class="sr-only" data-copy="messageHeading"></h2>
+      <p class="message-salutation handwritten reveal" data-copy="messageSalutation"></p>
+      <p class="personal-message reveal" dir="auto" data-copy="message"></p>
+      <p class="signoff handwritten reveal" data-copy="signoff"></p>
+      <div id="signatures" class="signatures"></div>
+      <p class="signature-postscript handwritten reveal" data-copy="signaturePostscript"></p>
+    </section>
+    <footer class="ending" aria-labelledby="ending-heading">
+      <div id="paper-bits" class="paper-bits" aria-hidden="true"></div>
+      <span class="ending-rule" aria-hidden="true"></span>
+      <h2 id="ending-heading" class="reveal" data-copy="ending"></h2>
+      <p class="handwritten reveal" data-copy="endingNote"></p>
+      <button id="read-again" class="read-again" data-copy="replay"></button>
+      <p class="footer-byline" data-copy="footer"></p>
+    </footer>
+  </main>
+  <noscript><p class="noscript-note">This letter needs JavaScript to open. Please enable it, then reload the page.</p></noscript>
+</body>
+</html>
